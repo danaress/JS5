@@ -11,18 +11,26 @@
 	<div>
 		<img class="profilePic" src="http://static2.businessinsider.com/image/51dd6b0ceab8eaa223000013/chinas-panda-diplomacy-has-entered-a-lucrative-new-phase.jpg">
 	</div>
-	<div class="userName">
-		<h2 ng-hide="userHide" ng-click="userClick()">User Name</h2>
-		<input class="userInput" ng-show="inputHide" type="text" name="userInput">
+	<div class="form">
+
+		<form ng-submit="newInfo">
+
+		<div class="name">
+			<p ng-hide="nameHide" ng-click="nameClick()">{{UserInfo[0]}}</p>
+			<input ng-blur="blurClick($event)" class="nameInput" ng-show="nameInputHide" type="text" ng-model="UserInfo[0]" name="NameInput">
+		</div>
+
+	<div class="description">
+		<p ng-hide="descriptionHide" ng-click="descriptionClick()">{{UserInfo[1]}}</p>
+		<input ng-blur="blurClick1($event)" class="descriptionInput" ng-show="descriptionInputHide" type="text" ng-model="UserInfo[1]" name="descriptionInput">
 	</div>
-	<div class="userDescription">
-		<p ng-hide="descriptionHide" ng-click="descriptionClick">User desicription and information</p>
+
+	<div class="address">
+		<p ng-hide="addressHide" ng-click="addressClick()">{{UserInfo[2]}}</p>
+		<input ng-blur="blurClick2($event)" class="addressInput" ng-show="addressInputHide" type="text" ng-model="UserInfo[2]" name="addressInput">
 	</div>
-	<div class="userList">
-		<ul ng-hide="listHide" ng-click="listClick">
-			<li>favorite movie</li>
-			<li>favorite food</li>
-		</ul>
+		<input type="submit">
+	</form>
 	</div>
 
 
