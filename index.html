@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="module1">
+<head>
+	<title>User Profile</title>
+
+		<link rel="stylesheet" type="text/css" href="main.css">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+</head>
+<body ng-controller="modcontroller">
+	<div>
+		<img class="profilePic" src="http://static2.businessinsider.com/image/51dd6b0ceab8eaa223000013/chinas-panda-diplomacy-has-entered-a-lucrative-new-phase.jpg">
+	</div>
+	<div class="userName">
+		<h2 ng-hide="userHide" ng-click="userClick()">User Name</h2>
+		<input class="userInput" ng-show="inputHide" type="text" name="userInput">
+	</div>
+	<div class="userDescription">
+		<p ng-hide="descriptionHide" ng-click="descriptionClick">User desicription and information</p>
+	</div>
+	<div class="userList">
+		<ul ng-hide="listHide" ng-click="listClick">
+			<li>favorite movie</li>
+			<li>favorite food</li>
+		</ul>
+	</div>
+
+
+
+
+
+
+
+		<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
